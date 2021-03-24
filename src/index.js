@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import Home from '../src/Views/Home';
 import Page404 from '../src/Views/Page404';
 import reportWebVitals from './reportWebVitals';
