@@ -439,6 +439,125 @@ module.exports = {
                 accessor: 'estado',
             },
           ],
+        oficialiaPartes: [
+            {
+              Header: 'Folio de la solicitud',
+              accessor: '_id', // accessor is the "key" in the data
+            },
+            {
+              Header: 'Tipo de trámite',
+              accessor: 'tipo',
+            },
+            {
+                Header: 'Tipo de solicitud',
+                accessor: 'tipo_servicio',
+            },
+            {
+                Header: 'Estado de la solicitud',
+                accessor: 'estado',
+            },
+            {
+                Header: 'Colonia',
+                accessor: 'colonia',
+            },
+            {
+                Header: 'C.P.',
+                accessor: 'codigo_postal',
+            },
+        ],
+        ejemploOficialia: [
+            {
+                '_id': 'jdjdjdjdjjdjd',
+                tipo: ' Vía publico',
+                'tipo_servicio': 'Poda',
+                estado: 'Recibida',
+                colonia: 'colonia',
+                codigo_postal: '11320'
+            }
+        ],
+        jefeArea: [
+            {
+              Header: 'Folio de la solicitud',
+              accessor: '_id', // accessor is the "key" in the data
+            },
+            {
+              Header: 'Tipo de trámite',
+              accessor: 'tipo',
+            },
+            {
+                Header: 'Tipo de solicitud',
+                accessor: 'tipo_servicio',
+            },
+            {
+                Header: 'Estado de la solicitud',
+                accessor: 'estado',
+            },
+            {
+                Header: 'Colonia',
+                accessor: 'colonia',
+            },
+            {
+                Header: 'C.P.',
+                accessor: 'codigo_postal',
+            },
+            {
+                Header: 'Consultar',
+                accessor: 'consulta',
+            },
+        ],
+        ejemploJA: [
+            {
+                '_id': 'jdjdjdjdjjdjd',
+                tipo: ' Vía publico',
+                'tipo_servicio': 'Poda',
+                estado: 'Recibida',
+                colonia: 'colonia',
+                codigo_postal: '11320',
+                consulta: '<Aquí iria un boton>'
+            }
+        ],
+        Admin: [
+            {
+              Header: 'Rol',
+              accessor: 'rol', // accessor is the "key" in the data
+            },
+            {
+              Header: 'Nombre',
+              accessor: 'nombres',
+            },
+            {
+                Header: 'Apellido Paterno',
+                accessor: 'apellido_paterno',
+            },
+            {
+                Header: 'Apellido Materno',
+                accessor: 'apellido_materno',
+            },
+            {
+                Header: 'Alcaldía',
+                accessor: 'alcaldia',
+            },
+            {
+                Header: 'Correo eléctronico',
+                accessor: 'email',
+            },
+            {
+                Header: 'Admin',
+                accessor: 'permiso_administrador',
+            },
+            
+        ],
+        ejemploAdmin: [
+            {
+                'rol': 'JA',
+                nombres: 'Gumercindo',
+                apellido_paterno: 'Perez',
+                apellido_materno: 'Juarez',
+                alcaldia: 'Alcaldia',
+                email: 'correo@dominio.com',
+                permiso_administrador: 'Nel'
+            }
+        ],
         mockData: [{    
             estado:'Enviada',
             '_id':'sj34344cdfg43nh4bdcs23243',
@@ -499,5 +618,6 @@ module.exports = {
             'tipo_servicio':'Derribo',
             tipo:'Vía pública'
         }],
+        
     },
 };
