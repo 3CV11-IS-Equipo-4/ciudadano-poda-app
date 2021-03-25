@@ -1,6 +1,7 @@
 .bar{
     background-color: #1bb600;
     padding: 0;
+    height: 6rem;
 }
 
 .conter{
@@ -24,7 +25,7 @@
     font-size: 1.5rem;
 }
 
-a {
+.nav-link{
     color: white;
 }
 
