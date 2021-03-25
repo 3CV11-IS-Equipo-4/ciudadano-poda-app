@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Home from '../src/Views/Home';
 import Page404 from '../src/Views/Page404';
 import Solicitud from '../src/Views/Solicitud';
+import Login from '../src/Views/Login';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Profile from './Views/Profile';
@@ -17,7 +18,7 @@ ReactDOM.render(
           <Home/>
         </Route>
         <Route exact path="/login">
-          <Home/>
+          <Login/>
         </Route>
         <Route path="/perfil">
           <Profile/>
