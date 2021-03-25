@@ -1,7 +1,8 @@
 import Button from "./Button";
 import useForm from "../hooks/useForm";
 import Input from "./Input";
-export default function Form({submit, inputsData, textBtn, children}) {
+import Select from "./Select";
+export default function Form({submit, inputsData, textBtn, children,style}) {
 
     const {
         inputs,
@@ -14,7 +15,16 @@ export default function Form({submit, inputsData, textBtn, children}) {
     const selectType = (i, n) => {
         switch(i.inputType){
             case 'select':
-                return <></>
+                return <Select
+                    label={i.label}
+                    options={i.items}
+                    key={i.name + 'select'}
+                    placeholder={i.placeholder}
+                    change={handleInputs}
+                    required={i.required}
+                    value={inputs[i.value]}
+                    name={i.name}
+                    />
             case 'photos':
                 return <></>
             default:
@@ -40,7 +50,7 @@ export default function Form({submit, inputsData, textBtn, children}) {
                 }
                 {children}
             </div>
-            <Button type="submit" text={textBtn}></Button>
+            <Button type="submit" style={style} text={textBtn}></Button>
         </form>
     );
 };

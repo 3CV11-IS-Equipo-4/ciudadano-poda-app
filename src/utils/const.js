@@ -80,9 +80,18 @@ module.exports = {
     ],
     inputSecondView: [{
         label:'Nombre: ',
-        type:'text',
-        placeholder:'Mario',
+        type:'email',
+        placeholder:'Selecciona una opción',
         required: true,
-        name: 'fifgdgme',
+        name: 'city',
+        inputType:'select',
+        items: [{value:'gam', label:'Gustavo A. Madero'}, {value:'gol', label:'Holi'}],
+    },
+    {
+        label:'Contraseña: ',
+        type:'password',
+        placeholder:'',
+        required: true,
+        name: 'password',
     },],
 };
