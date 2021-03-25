@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import Navbar from '../Components/Navbar';
+import Layout from '../Components/Layout';
+
+
 export default function Page404() {
     return(
-        <>
-            <Navbar type={"ciudadano"}></Navbar>
-
+        <Layout head="No encontrado :c" subheading="404">
             <h1>Esa ruta no existe</h1>
             <Link to="/">Volver al inicio</Link>
-        </>
+        </Layout>
     );
 }
