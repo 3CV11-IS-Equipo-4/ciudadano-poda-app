@@ -516,6 +516,47 @@ module.exports = {
                 consulta: '<Aquí iria un boton>'
             }
         ],
+        dictaminador: [
+            {
+              Header: 'Folio de la solicitud',
+              accessor: '_id', // accessor is the "key" in the data
+            },
+            {
+              Header: 'Tipo de trámite',
+              accessor: 'tipo',
+            },
+            {
+                Header: 'Tipo de solicitud',
+                accessor: 'tipo_servicio',
+            },
+            {
+                Header: 'Estado de la solicitud',
+                accessor: 'estado',
+            },
+            {
+                Header: 'Colonia',
+                accessor: 'colonia',
+            },
+            {
+                Header: 'C.P.',
+                accessor: 'codigo_postal',
+            },
+            {
+                Header: 'Consultar',
+                accessor: 'consulta',
+            },
+        ],
+        ejemploDI: [
+            {
+                '_id': 'jdjdjdjdjjdjd',
+                tipo: ' Vía publico',
+                'tipo_servicio': 'Poda',
+                estado: 'Recibida',
+                colonia: 'colonia',
+                codigo_postal: '11320',
+                consulta: '<Aquí iria un boton>'
+            }
+        ],
         Admin: [
             {
               Header: 'Rol',

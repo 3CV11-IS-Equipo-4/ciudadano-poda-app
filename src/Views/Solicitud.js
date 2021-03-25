@@ -66,7 +66,7 @@ export default function Solicitud(){
     }, []); */
 
     return (
-        <Layout head={`Solicitud en ${type}`}>
+        <Layout head={`Solicitud en ${type}`} type="ciudadano">
         <Form inputsData={inputsData} submit={changePage} styling="success" textBtn="Siguiente">
         </Form>
         <Link to="/">Volver al inicio</Link> 
