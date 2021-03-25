@@ -8,6 +8,9 @@ import Solicitud from '../src/Views/Solicitud';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Profile from './Views/Profile';
+import OP from './Views/PartsOfficer';
+import JA from './Views/AreaBoss';
+import Admin from './Views/Admin';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +24,15 @@ ReactDOM.render(
         </Route>
         <Route path="/perfil">
           <Profile/>
+        </Route>
+        <Route path="/oficialiaPartes">
+          <OP/>
+        </Route>
+        <Route path="/jefeArea">
+          <JA/>
+        </Route>
+        <Route path="/admin">
+          <Admin/>
         </Route>
         <Route exact path="/solicitud/:type" component={Solicitud}/>
         <Route ath="*">
