@@ -1,5 +1,16 @@
 .card {
     width: 400px;
     height: 429px;
-    background-color: aqua;
+    background-color: #f2f2f2;
 }
+
+.card-img{
+    width: 90%;
+
+}
+
+.card-body{
+    padding-top: 12%;
+}
+
+/*style="width: 18rem;"*/
