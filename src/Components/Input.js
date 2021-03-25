@@ -3,8 +3,8 @@ import React from 'react';
 
 function Input({label,type,placeholder,change,value,required,name}){
     return(
-        <div className="control-group">
-            <div className="col-md-2">
+        <>
+            <div className="col-3 mx-3">
               <label class="form-label">{label}</label>
               <input 
               name={name}
@@ -16,7 +16,7 @@ function Input({label,type,placeholder,change,value,required,name}){
               required={required}/>
               <p className="help-block text-danger"></p>
             </div>
-        </div>
+        </>
     );
 };
 
