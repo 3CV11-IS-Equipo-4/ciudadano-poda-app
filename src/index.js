@@ -12,6 +12,7 @@ import Profile from './Views/Profile';
 import OP from './Views/PartsOfficer';
 import JA from './Views/AreaBoss';
 import Admin from './Views/Admin';
+import DI from './Views/Dictator';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -31,6 +32,9 @@ ReactDOM.render(
         </Route>
         <Route path="/jefeArea">
           <JA/>
+        </Route>
+        <Route path="/dictaminador">
+          <DI/>
         </Route>
         <Route path="/admin">
           <Admin/>
