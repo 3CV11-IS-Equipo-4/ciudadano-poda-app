@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.btn-danger {
+  background-color: #F45B69;
+}
+
+.btn-success {
+  background-color: #1BB600 !important;
+  border-color: #1BB600 !important;
+}
