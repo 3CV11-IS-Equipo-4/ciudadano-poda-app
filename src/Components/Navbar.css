@@ -1,0 +1,33 @@
+.bar{
+    background-color: #1bb600;
+    padding: 0;
+}
+
+.conter{
+    padding: 0;
+
+}
+
+.logo{
+    background-color: #f2f2f2f2;
+    height: 100%;
+}
+
+.title{
+    background-color: #1bb600;
+    color:#ffffff;
+}
+
+.sub-tittle{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+a {
+    color: white;
+}
+
+.nav {
+    justify-content: flex-start;
+}
