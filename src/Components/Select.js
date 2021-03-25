@@ -17,7 +17,7 @@ function Select({label,options,placeholder,change,value,required,name}){
                 >   
                     <option value="DEFAULT" disabled>{placeholder}</option>
                     { options  
-                    ? options.map((o)=><option key={o.value +'option'} value={o.value}>{o.label}</option>)
+                    ? options.map((o)=><option key={o.value + name} value={o.value}>{o.label}</option>)
                     : ''}
                      
               </select>
