@@ -1,33 +1,38 @@
 import Layout from "../Components/Layout";
 import Card from "../Components/Card-blank";
 import Form from '../Components/Form';
-import {logins} from '../utils/const';
+import { logins } from '../utils/const';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useHistory, useParams } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 export default function Home() {
-    // const [inputsData] = useState(logins);
-    // const changePage = (inputs) => {
-    //     console.log('Ya no debo avanzar');
-    //     axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...inputs, tipo:type })
-    //         .then(({response})=>{
+    const history = useHistory();
 
-    //         })
-    //         .catch(e => {
+    const login = (inputs) => {
+        console.log('Login');
+        axios.post('https://podayderribo-cdmx.herokuapp.com/', {...inputs })
+            .then(({response})=>{
 
-    //         });
-    // };
-    //const inputsData = logins()
-    //let content = <Form inputsData={inputsData} submit={changePage} styling="success" textBtn="Siguiente"></Form>;
-    let content = "";
-    
+            })
+            .catch(e => {
+
+            });
+        history.push('perfil');
+    };
 
     return(
-        <Layout head="">
-            <div className="d-flex w-100 justify-content-around">
-                <Card className="m-5" title="Titulo"  content={content}></Card>
-            </div>
+        <Layout head={`Consultar solicitudes`}>
+            <Card className="m-5" title="Inicia sesión" styling="d-flex flex-row">
+                <Form 
+                inputsData={logins.loginCIView} 
+                submit={login} 
+                styling="success" 
+                textBtn="Siguiente"
+                stylingF="d-flex flex-row flex-wrap"
+                stylingI="col-md-10">
+                </Form>
+            </Card>
+            <Link to="/">Volver al inicio</Link> 
         </Layout>
     );
 }
