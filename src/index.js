@@ -7,6 +7,7 @@ import Page404 from '../src/Views/Page404';
 import Solicitud from '../src/Views/Solicitud';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Profile from './Views/Profile';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,8 +19,11 @@ ReactDOM.render(
         <Route exact path="/login">
           <Home/>
         </Route>
+        <Route path="/perfil">
+          <Profile/>
+        </Route>
         <Route exact path="/solicitud/:type" component={Solicitud}/>
-        <Route  path="*">
+        <Route ath="*">
           <Page404/>
         </Route>
       </Switch>

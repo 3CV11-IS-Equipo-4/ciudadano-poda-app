@@ -212,7 +212,17 @@ module.exports = {
             required: false,
             inputType: 'photos',
             name: 'fotos',
-        },],
+        },
+        {
+            label:'Tipo de servicio: ',
+            type:'text',
+            placeholder:'Selecciona una opción: ',
+            required: false,
+            inputType: 'photos',
+            name: 'colonia_arbol',
+            items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
+        }    
+    ],
     },
     publica: {
         citizenDataView: [
@@ -369,7 +379,16 @@ module.exports = {
             required: false,
             inputType: 'photos',
             name: 'fotos',
+        },{
+            label:'Tipo de servicio: ',
+            type:'text',
+            placeholder:'Selecciona una opción: ',
+            required: false,
+            inputType: 'photos',
+            name: 'colonia_arbol',
+            items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
         }],
+        
     },
     logins:{
         loginEMView: [{
@@ -400,5 +419,85 @@ module.exports = {
             required: true,
             name: 'password',
         }],
-    }
+    },
+    tables: {
+        estadoSolicitud: [
+            {
+              Header: 'Folio de la solicitud',
+              accessor: '_id', // accessor is the "key" in the data
+            },
+            {
+              Header: 'Tipo de trámite',
+              accessor: 'tipo',
+            },
+            {
+                Header: 'Tipo de solicitud',
+                accessor: 'tipo_servicio',
+            },
+            {
+                Header: 'Estado de la solicitud',
+                accessor: 'estado',
+            },
+          ],
+        mockData: [{    
+            estado:'Enviada',
+            '_id':'sj34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'si34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sh34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sg34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sf34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'se34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sd34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sc34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sb34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        },
+        {
+            estado:'Enviada',
+            '_id':'sa34344cdfg43nh4bdcs23243',
+            'tipo_servicio':'Derribo',
+            tipo:'Vía pública'
+        }],
+    },
 };
