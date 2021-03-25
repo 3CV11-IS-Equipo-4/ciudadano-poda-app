@@ -4,11 +4,11 @@ import './Layout.css'
 
 function Layout({head, subheading,children}){
     return(
-        <div class="container-fluid layout">
+        <div className="container-fluid text-center layout">
         {/*Navbar*/}
         <h1>{head}</h1>
         <h2>{subheading}</h2>
-        <div class="container d-flex justify-content-center align-items-center flex-column">
+        <div className="container d-flex justify-content-center align-items-center flex-column">
             {children}            
         </div>
 

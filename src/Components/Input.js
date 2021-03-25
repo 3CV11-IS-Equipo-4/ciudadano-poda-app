@@ -4,14 +4,15 @@ import React from 'react';
 function Input({label,type,placeholder,change,value,required,name}){
     return(
         <>
-            <div className="col-3 mx-3">
-              <label class="form-label">{label}</label>
+            <div className="col-12 col-md-3 mx-3">
+              <label className="form-label">{label}</label>
               <input 
               name={name}
+              id={name}
               type={type} 
               onChange={change}
               value={value}
-              class="form-control"
+              className="form-control"
               placeholder={placeholder} 
               required={required}/>
               <p className="help-block text-danger"></p>
