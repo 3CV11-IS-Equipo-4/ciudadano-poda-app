@@ -2,7 +2,7 @@ import Button from "./Button";
 import useForm from "../hooks/useForm";
 import Input from "./Input";
 import Select from "./Select";
-export default function Form({submit, inputsData, textBtn, children,style}) {
+export default function Form({submit, inputsData, textBtn, children, styling}) {
 
     const {
         inputs,
@@ -50,7 +50,7 @@ export default function Form({submit, inputsData, textBtn, children,style}) {
                 }
                 {children}
             </div>
-            <Button type="submit" style={style} text={textBtn}></Button>
+            <Button type="submit" styling={styling} text={textBtn}></Button>
         </form>
     );
 };
