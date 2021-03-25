@@ -218,7 +218,7 @@ module.exports = {
             type:'text',
             placeholder:'Selecciona una opción: ',
             required: false,
-            inputType: 'select',,
+            inputType: 'select',
             name: 'colonia_arbol',
             items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
         }    
