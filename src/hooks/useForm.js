@@ -16,6 +16,20 @@ export default function useForm(callback, defaults){
         // recibir el evento 
         // cambiar el valor de la propiedad
     };
+    
+    const handlePhotos = (urls, value) => {
+        console.log('Inputs', inputs);
+        console.log('Event', value);
+        console.log('Event', urls);
+        
+        setInputs({
+            ...inputs,
+           [value]:urls
+        });
+        console.log('Inputs', inputs);
+        // recibir el evento 
+        // cambiar el valor de la propiedad
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -26,6 +40,7 @@ export default function useForm(callback, defaults){
         inputs,
         handleInputs,
         handleSubmit,
+        handlePhotos,
     };
 
 }

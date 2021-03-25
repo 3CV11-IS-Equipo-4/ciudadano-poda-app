@@ -2,12 +2,14 @@ import Button from "./Button";
 import useForm from "../hooks/useForm";
 import Input from "./Input";
 import Select from "./Select";
-export default function Form({submit, inputsData, textBtn, children,style}) {
+import Photo from "./Photo";
+export default function Form({submit, inputsData, textBtn, children, styling}) {
 
     const {
         inputs,
         handleSubmit,
         handleInputs,
+        handlePhotos,
     } = useForm(submit,
         {}
     );
@@ -26,7 +28,13 @@ export default function Form({submit, inputsData, textBtn, children,style}) {
                     name={i.name}
                     />
             case 'photos':
-                return <></>
+                return <Photo
+                    label={i.label}
+                    key={i.name + 'photo'}
+                    required={i.required}
+                    name={i.name} 
+                    change={handlePhotos}
+                />
             default:
                 return <Input
                         label={i.label}
@@ -50,7 +58,7 @@ export default function Form({submit, inputsData, textBtn, children,style}) {
                 }
                 {children}
             </div>
-            <Button type="submit" style={style} text={textBtn}></Button>
+            <Button type="submit" styling={styling} text={textBtn}></Button>
         </form>
     );
 };

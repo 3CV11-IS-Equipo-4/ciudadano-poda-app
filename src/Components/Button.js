@@ -1,5 +1,5 @@
-export default function Button({click = () => {},style, type, text}) {
+export default function Button({click = () => {}, styling, type, text}) {
     return(
-        <button onClick={click} type={type} className={`btn btn-${style}`}>{text}</button>
+        <button onClick={click} type={type} className={`btn btn-${styling} mt-5 mb-3`}>{text}</button>
     );
 }

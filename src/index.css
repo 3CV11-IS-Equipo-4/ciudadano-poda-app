@@ -16,5 +16,6 @@ code {
 }
 
 .btn-success {
-  background-color: #1BB600;
+  background-color: #1BB600 !important;
+  border-color: #1BB600 !important;
 }

@@ -4,6 +4,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from '../src/Views/Home';
 import Page404 from '../src/Views/Page404';
+import Solicitud from '../src/Views/Solicitud';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route exact path="/login">
           <Home/>
         </Route>
+        <Route exact path="/solicitud/:type" component={Solicitud}/>
         <Route  path="*">
           <Page404/>
         </Route>
