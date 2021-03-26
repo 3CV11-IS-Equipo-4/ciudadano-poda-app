@@ -1,6 +1,6 @@
 import './Card.css';
-import img_pi from '../img/img-2.jpg'
-import img_ci from '../img/img-1.jpg'
+import img_pi from '../img/img-2.png'
+import img_ci from '../img/img-1.png'
 
 export default function Card({ type }) {
     return(

@@ -9,20 +9,21 @@ export default function Home() {
     const history = useHistory();
 
     const login = (inputs) => {
-        console.log('Login');
-        axios.post('https://podayderribo-cdmx.herokuapp.com/', {...inputs })
-            .then(({response})=>{
-
+        console.log('Login', inputs);
+        const inputsAEnviar = {... inputs};
+        /* axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', inputsAEnviar)
+            .then(({data})=>{
+                
             })
             .catch(e => {
 
-            });
+            }); */
         history.push('perfil');
     };
 
     return(
         <Layout head={`Consultar solicitudes`}>
-            <Card className="m-5" title="Inicia sesión" styling="d-flex flex-row">
+            <Card className="m-5" title="Inicia sesión" styling="d-flex flex-wrap flex-row justify-content-center">
                 <Form 
                 inputsData={logins.loginCIView} 
                 submit={login} 
