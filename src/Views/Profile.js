@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 export default function Profile() {
     const history = useHistory();
     return(
-        <Layout>
+        <Layout type="ciudadano">
             <div className="row w-100 h-100">
                 <div className="col-12 col-lg-5 px-3 text-right d-flex flex-column align-items-center">
                     <Card>
