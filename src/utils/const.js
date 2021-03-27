@@ -97,7 +97,7 @@ module.exports = {
                 required: true,
                 name: 'solicitud',
                 inputType:'select',
-                items: [{value:'Topiara', label:'Poda o derribo por ornamentación'}, {value:'Construccion', label:'Poda o derribo por construcción, remodelación o amplación'},{value:'Riesgo', label:'Derribo por riesgo '}],
+                items: [{value:'topiaria', label:'Poda o derribo por ornamentación'}, {value:'construccion', label:'Poda o derribo por construcción, remodelación o amplación'},{value:'riesgo', label:'Derribo por riesgo '}],
             },
             {
                 label:'Comprobante de propiedad',

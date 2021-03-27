@@ -29,13 +29,13 @@ export default function Solicitud(){
     const changePage = (inputs) => {
         if(count < noStages) {
             if(type ==='propiedad-privada' && count === 1) {
-                if(inputs.solicitud === 'Topiara') {
+                if(inputs.solicitud === 'topiaria') {
                     setStage('treeDataView');
                     setCount(4);
-                } else if(inputs.solicitud === 'Construccion') {
+                } else if(inputs.solicitud === 'construccion') {
                     setStage('constructionDataView');
                     setCount(3);
-                } else if(inputs.solicitud === 'Riesgo') {
+                } else if(inputs.solicitud === 'riesgo') {
                     setStage('riesgoDataView');
                     setCount(2);
                 }
@@ -48,8 +48,30 @@ export default function Solicitud(){
                 setCount(n);
             }
         } else {
-            console.log('Ya no debo avanzar');
-            axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...inputs, modalidad:type })
+            let dataInputs = {...inputs};
+            delete dataInputs.solicitud;
+            if(type==='propiedad-privada') {
+                dataInputs.privada = {
+                    tipo_privada: inputs.solicitud,
+                    comprobante_domicilio: inputs.comprobante_domicilio,
+                    comprobante_propiedad: inputs.comprobante_propiedad,
+                }
+                if(inputs.solicitud === 'construccion') {
+                    dataInputs.privada.construccion = {
+                        "documento_registro" : inputs.documento_registro,
+                        "documento_planos" : inputs.documento_planos,
+                        "documento_declaratoria": inputs.documento_declaratoria, 
+                    }
+                    delete dataInputs.documento_registro, dataInputs.documento_planos, dataInputs.documento_declaratoria;
+                }
+                if(inputs.solicitud === 'riesgo') {
+                    dataInputs.privada.riesgo = {
+                        "documento_dictamen_riesgo" : inputs.documento_dictamen_riesgo,
+                    }
+                    delete dataInputs.documento_dictamen_riesgo;
+                }
+            }
+            axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...dataInputs, modalidad:type })
             .then(({data})=>{
 
             })
