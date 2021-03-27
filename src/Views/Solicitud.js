@@ -16,7 +16,6 @@ export default function Solicitud(){
     const [stage, setStage] = useState('');
     const [count, setCount] = useState(0);
     useEffect(() => {
-        console.log(noStages,tipo,stage,count);
         if(tipo[stage]) {
             setInputsData(tipo[stage]);
         }
@@ -29,12 +28,28 @@ export default function Solicitud(){
 
     const changePage = (inputs) => {
         if(count < noStages) {
-            setStage(Object.keys(tipo)[count + 1]);
-            const n = count + 1;
-            setCount(n);
+            if(type ==='propiedad-privada' && count === 1) {
+                if(inputs.solicitud === 'Topiara') {
+                    setStage('treeDataView');
+                    setCount(4);
+                } else if(inputs.solicitud === 'Construccion') {
+                    setStage('constructionDataView');
+                    setCount(3);
+                } else if(inputs.solicitud === 'Riesgo') {
+                    setStage('riesgoDataView');
+                    setCount(2);
+                }
+            } else if(type ==='propiedad-privada' && count === 2){
+                setStage('treeDataView');
+                setCount(4);
+            } else {
+                setStage(Object.keys(tipo)[count + 1]);
+                const n = count + 1;
+                setCount(n);
+            }
         } else {
             console.log('Ya no debo avanzar');
-            axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...inputs, tipo:type })
+            axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...inputs, modalidad:type })
             .then(({data})=>{
 
             })

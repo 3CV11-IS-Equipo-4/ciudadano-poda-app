@@ -97,7 +97,7 @@ module.exports = {
                 required: true,
                 name: 'solicitud',
                 inputType:'select',
-                items: [{value:'Topiara', label:'Poda o derribo por ornamentación'}, {value:'Construcción', label:'Poda o derribo por construcción, remodelación o amplación'},{value:'Riesgo', label:'Derribo por riesgo '}],
+                items: [{value:'Topiara', label:'Poda o derribo por ornamentación'}, {value:'Construccion', label:'Poda o derribo por construcción, remodelación o amplación'},{value:'Riesgo', label:'Derribo por riesgo '}],
             },
             {
                 label:'Comprobante de propiedad',
@@ -129,21 +129,24 @@ module.exports = {
                 label:'Registro de Manifestación de Construcción de Tipo A, B o C o Licencia de Construcción Especial con sello de la Alcaldía.',
                 type:'',
                 placeholder:'Docuemento pdf',
-                required: true,
+                required: false,
+                inputType: 'photos',
                 name: 'documento_registro',
             },
             {
                 label:'Declaratoria ambiental',
                 type:'',
                 placeholder:'Documento pdf',
-                required: true,
+                required: false,
+                inputType: 'photos',
                 name: 'documento_declaratoria',
             },
             {
                 label:'Planos arquitectonicos',
                 type:'',
                 placeholder:'Documento pdf',
-                required: true,
+                required: false,
+                inputType: 'photos',
                 name: 'documento_planos',
             },
         ],
@@ -219,7 +222,7 @@ module.exports = {
             placeholder:'Selecciona una opción: ',
             required: false,
             inputType: 'select',
-            name: 'tipo_servicio',
+            name: 'tipo_de_servicio',
             items: [{value:'Poda', label:'Poda'}, {value:'Derribo', label:'Derribo'}],
         }    
     ],
@@ -385,7 +388,7 @@ module.exports = {
             placeholder:'Selecciona una opción: ',
             required: false,
             inputType: 'select',
-            name: 'tipo_servicio',
+            name: 'tipo_de_servicio',
             items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
         }],
         
@@ -432,7 +435,7 @@ module.exports = {
             },
             {
                 Header: 'Tipo de solicitud',
-                accessor: 'tipo_servicio',
+                accessor: 'tipo_de_servicio',
             },
             {
                 Header: 'Estado de la solicitud',
@@ -450,7 +453,7 @@ module.exports = {
             },
             {
                 Header: 'Tipo de solicitud',
-                accessor: 'tipo_servicio',
+                accessor: 'tipo_de_servicio',
             },
             {
                 Header: 'Estado de la solicitud',
@@ -468,8 +471,8 @@ module.exports = {
         ejemploOficialia: [
             {
                 '_id': 'jdjdjdjdjjdjd',
-                tipo: ' Vía publico',
-                'tipo_servicio': 'Poda',
+                modalidad: ' Vía publico',
+                'tipo_de_servicio': 'Poda',
                 estado: 'Recibida',
                 colonia: 'colonia',
                 codigo_postal: '11320'
@@ -486,7 +489,7 @@ module.exports = {
             },
             {
                 Header: 'Tipo de solicitud',
-                accessor: 'tipo_servicio',
+                accessor: 'tipo_de_servicio',
             },
             {
                 Header: 'Estado de la solicitud',
@@ -508,8 +511,8 @@ module.exports = {
         ejemploJA: [
             {
                 '_id': 'jdjdjdjdjjdjd',
-                tipo: ' Vía publico',
-                'tipo_servicio': 'Poda',
+                modalidad: ' Vía publico',
+                'tipo_de_servicio': 'Poda',
                 estado: 'Recibida',
                 colonia: 'colonia',
                 codigo_postal: '11320',
@@ -527,7 +530,7 @@ module.exports = {
             },
             {
                 Header: 'Tipo de solicitud',
-                accessor: 'tipo_servicio',
+                accessor: 'tipo_de_servicio',
             },
             {
                 Header: 'Estado de la solicitud',
@@ -549,8 +552,8 @@ module.exports = {
         ejemploDI: [
             {
                 '_id': 'jdjdjdjdjjdjd',
-                tipo: ' Vía publico',
-                'tipo_servicio': 'Poda',
+                modalidad: ' Vía publico',
+                'tipo_de_servicio': 'Poda',
                 estado: 'Recibida',
                 colonia: 'colonia',
                 codigo_postal: '11320',
@@ -602,62 +605,62 @@ module.exports = {
         mockData: [{    
             estado:'Enviada',
             '_id':'sj34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'si34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sh34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sg34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sf34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'se34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sd34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sc34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sb34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         },
         {
             estado:'Enviada',
             '_id':'sa34344cdfg43nh4bdcs23243',
-            'tipo_servicio':'Derribo',
-            tipo:'Vía pública'
+            'tipo_de_servicio':'Derribo',
+            modalidad:'Vía pública'
         }],
         
     },
