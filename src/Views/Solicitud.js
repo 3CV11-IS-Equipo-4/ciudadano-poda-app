@@ -62,7 +62,9 @@ export default function Solicitud(){
                         "documento_planos" : inputs.documento_planos,
                         "documento_declaratoria": inputs.documento_declaratoria, 
                     }
-                    delete dataInputs.documento_registro, dataInputs.documento_planos, dataInputs.documento_declaratoria;
+                    delete dataInputs.documento_registro;
+                    delete dataInputs.documento_planos;
+                    delete dataInputs.documento_declaratoria;
                 }
                 if(inputs.solicitud === 'riesgo') {
                     dataInputs.privada.riesgo = {
