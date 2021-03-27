@@ -35,7 +35,7 @@ export default function Solicitud(){
         } else {
             console.log('Ya no debo avanzar');
             axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...inputs, tipo:type })
-            .then(({response})=>{
+            .then(({data})=>{
 
             })
             .catch(e => {

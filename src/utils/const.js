@@ -219,8 +219,8 @@ module.exports = {
             placeholder:'Selecciona una opción: ',
             required: false,
             inputType: 'select',
-            name: 'colonia_arbol',
-            items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
+            name: 'tipo_servicio',
+            items: [{value:'Poda', label:'Poda'}, {value:'Derribo', label:'Derribo'}],
         }    
     ],
     },
@@ -385,7 +385,7 @@ module.exports = {
             placeholder:'Selecciona una opción: ',
             required: false,
             inputType: 'select',
-            name: 'colonia_arbol',
+            name: 'tipo_servicio',
             items: [{value:'Poda', label:'Poda '}, {value:'Derribo', label:'Derribo'}],
         }],
         
