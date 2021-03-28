@@ -3,7 +3,7 @@ import useForm from "../hooks/useForm";
 import Input from "./Input";
 import Select from "./Select";
 import Photo from "./Photo";
-export default function Form({submit, inputsData, textBtn, children, styling}) {
+export default function Form({submit, inputsData, textBtn, children, styling, stylingF, stylingI}) {
 
     const {
         inputs,
@@ -45,12 +45,13 @@ export default function Form({submit, inputsData, textBtn, children, styling}) {
                         value={inputs[i.value]}
                         required={i.required}
                         name={i.name}
+                        stylingI={stylingI}
                     />
         }
     }
     return(
         <form onSubmit={handleSubmit} className="container">
-            <div className="d-flex flex-wrap justify-content-center">
+            <div className={stylingF || "d-flex flex-wrap justify-content-center"}>
                 {inputsData ? 
                     inputsData.map((i,index) => 
                     selectType(i,index))

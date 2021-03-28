@@ -1,10 +1,10 @@
 
 import React from 'react';
 
-function Input({label,type,placeholder,change,value,required,name}){
+function Input({label,type,placeholder,change,value,required,name,stylingI}){
     return(
         <>
-            <div className="col-12 col-md-3 mx-3">
+            <div className={`col-12  mx-3 ${stylingI || "col-md-3"}`}>
               <label className="form-label">{label}</label>
               <input 
               name={name}

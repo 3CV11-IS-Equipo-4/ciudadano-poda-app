@@ -3,15 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from '../src/Views/Home';
+import Login from '../src/Views/Login';
 import Page404 from '../src/Views/Page404';
 import Solicitud from '../src/Views/Solicitud';
-import Login from '../src/Views/Login';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Profile from './Views/Profile';
-import OP from './Views/PartsOfficer';
-import JA from './Views/AreaBoss';
-import Admin from './Views/Admin';
+import Success from './Views/Success';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,14 +24,11 @@ ReactDOM.render(
         <Route path="/perfil">
           <Profile/>
         </Route>
-        <Route path="/oficialiaPartes">
-          <OP/>
+        <Route path="/registro/enviado/exitoso">
+          <Success exitoso={true}/>
         </Route>
-        <Route path="/jefeArea">
-          <JA/>
-        </Route>
-        <Route path="/admin">
-          <Admin/>
+        <Route path="/registro/enviado/fallido">
+          <Success exitoso={false}/>
         </Route>
         <Route exact path="/solicitud/:type" component={Solicitud}/>
         <Route ath="*">
