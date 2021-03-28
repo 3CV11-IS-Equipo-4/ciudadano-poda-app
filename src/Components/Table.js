@@ -22,6 +22,7 @@ export default function Table({cols, datos}) {
   } = useTable({ columns, data }, useSortBy)
 
   return (
+    <div className="table-responsive">
     <table {...getTableProps()} className="table table-bordered mx-3 p-1 shadow bg-white">
       <thead>
         {headerGroups.map(headerGroup => (
@@ -62,5 +63,6 @@ export default function Table({cols, datos}) {
         })}
       </tbody>
     </table>
+    </div>
   )
 }

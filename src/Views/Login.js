@@ -22,7 +22,7 @@ export default function Home() {
     };
 
     return(
-        <Layout head={`Consultar solicitudes`}>
+        <Layout head={`Consultar solicitudes`} type="ciudadano">
             <Card className="m-5" title="Inicia sesión" styling="d-flex flex-wrap flex-row justify-content-center">
                 <Form 
                 inputsData={logins.loginCIView} 

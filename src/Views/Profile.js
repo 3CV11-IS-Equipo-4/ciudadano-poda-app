@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 export default function Profile() {
     const history = useHistory();
     return(
-        <Layout>
+        <Layout type="ciudadano">
             <div className="row w-100 h-100">
                 <div className="col-12 col-lg-5 px-3 text-right d-flex flex-column align-items-center">
                     <Card>
@@ -30,7 +30,9 @@ export default function Profile() {
                     </Card>
                     <Button styling="success" type="button" click={() => history.push('/login')} text="Cerrar Sesión"></Button>
                 </div>
-                <div className="col-12 col-lg-7 px-3"><Table cols={tables.estadoSolicitud} datos={tables.mockData}></Table></div>
+                <div className="col-12 col-lg-7 px-3">
+                    <Table cols={tables.estadoSolicitud} datos={tables.mockData}></Table>
+                </div>
             </div>
         </Layout>
     );
