@@ -30,7 +30,9 @@ export default function Profile() {
                     </Card>
                     <Button styling="success" type="button" click={() => history.push('/login')} text="Cerrar Sesión"></Button>
                 </div>
-                <div className="col-12 col-lg-7 px-3"><Table cols={tables.estadoSolicitud} datos={tables.mockData}></Table></div>
+                <div className="col-12 col-lg-7 px-3">
+                    <Table cols={tables.estadoSolicitud} datos={tables.mockData}></Table>
+                </div>
             </div>
         </Layout>
     );
