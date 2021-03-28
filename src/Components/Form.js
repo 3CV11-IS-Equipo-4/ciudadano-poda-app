@@ -3,15 +3,16 @@ import useForm from "../hooks/useForm";
 import Input from "./Input";
 import Select from "./Select";
 import Photo from "./Photo";
-export default function Form({submit, inputsData, textBtn, children, styling, stylingF, stylingI}) {
+export default function Form({submit, inputsData, textBtn, children, styling, stylingF, stylingI,page}) {
 
     const {
         inputs,
         handleSubmit,
         handleInputs,
         handlePhotos,
+        buttonStage,
     } = useForm(submit,
-        {}
+        {},page
     );
 
     const selectType = (i, n) => {
@@ -59,7 +60,9 @@ export default function Form({submit, inputsData, textBtn, children, styling, st
                 }
                 {children}
             </div>
+            {buttonStage ? 
             <Button type="submit" styling={styling} text={textBtn}></Button>
+            : ''}
         </form>
     );
 };
