@@ -9,6 +9,7 @@ import Solicitud from '../src/Views/Solicitud';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Profile from './Views/Profile';
+import Success from './Views/Success';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,6 +23,12 @@ ReactDOM.render(
         </Route>
         <Route path="/perfil">
           <Profile/>
+        </Route>
+        <Route path="/registro/enviado/exitoso">
+          <Success exitoso={true}/>
+        </Route>
+        <Route path="/registro/enviado/fallido">
+          <Success exitoso={false}/>
         </Route>
         <Route exact path="/solicitud/:type" component={Solicitud}/>
         <Route ath="*">
