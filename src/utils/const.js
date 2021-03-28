@@ -433,7 +433,7 @@ module.exports = {
             },
             {
               Header: 'Tipo de trámite',
-              accessor: 'tipo',
+              accessor: 'modalidad',
             },
             {
                 Header: 'Tipo de solicitud',
@@ -451,7 +451,7 @@ module.exports = {
             },
             {
               Header: 'Tipo de trámite',
-              accessor: 'tipo',
+              accessor: 'modalidad',
             },
             {
                 Header: 'Tipo de solicitud',
@@ -487,7 +487,7 @@ module.exports = {
             },
             {
               Header: 'Tipo de trámite',
-              accessor: 'tipo',
+              accessor: 'modalidad',
             },
             {
                 Header: 'Tipo de solicitud',
@@ -528,7 +528,7 @@ module.exports = {
             },
             {
               Header: 'Tipo de trámite',
-              accessor: 'tipo',
+              accessor: 'modalidad',
             },
             {
                 Header: 'Tipo de solicitud',
@@ -619,7 +619,7 @@ module.exports = {
         {
             estado:'Enviada',
             '_id':'sh34344cdfg43nh4bdcs23243',
-            'tipo_de_servicio':'Derribo',
+            'tipo_de_servicio':'Poda',
             modalidad:'Vía pública'
         },
         {
@@ -631,7 +631,7 @@ module.exports = {
         {
             estado:'Enviada',
             '_id':'sf34344cdfg43nh4bdcs23243',
-            'tipo_de_servicio':'Derribo',
+            'tipo_de_servicio':'Poda',
             modalidad:'Vía pública'
         },
         {
@@ -643,7 +643,7 @@ module.exports = {
         {
             estado:'Enviada',
             '_id':'sd34344cdfg43nh4bdcs23243',
-            'tipo_de_servicio':'Derribo',
+            'tipo_de_servicio':'Poda',
             modalidad:'Vía pública'
         },
         {

@@ -49,13 +49,15 @@ export default function Solicitud(){
             }
         } else {
             let dataInputs = {...inputs};
-            delete dataInputs.solicitud;
             if(type==='propiedad-privada') {
                 dataInputs.privada = {
                     tipo_privada: inputs.solicitud,
                     comprobante_domicilio: inputs.comprobante_domicilio,
                     comprobante_propiedad: inputs.comprobante_propiedad,
                 }
+                delete dataInputs.solicitud;
+                delete dataInputs.comprobante_domicilio;
+                delete dataInputs.comprobante_propiedad;
                 if(inputs.solicitud === 'construccion') {
                     dataInputs.privada.construccion = {
                         "documento_registro" : inputs.documento_registro,
