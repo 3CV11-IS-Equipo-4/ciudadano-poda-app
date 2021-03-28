@@ -75,12 +75,14 @@ export default function Solicitud(){
                     delete dataInputs.documento_dictamen_riesgo;
                 }
             }
-            axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', {...dataInputs, modalidad:type })
+            axios.post('https://poda-api.herokuapp.com/solicitudes/', {...dataInputs, modalidad:type })
             .then(({data})=>{
-
+                console.log(data);
+                history.push('/registro/enviado/exitoso');
             })
             .catch(e => {
-
+                console.log(e);
+                history.push('/registro/enviado/fallido');
             });
         }
         console.log(inputs, stage, count,noStages);
