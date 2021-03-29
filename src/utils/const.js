@@ -415,7 +415,7 @@ module.exports = {
             type:'email',
             placeholder:'correoele@domino.com',
             required: true,
-            name: 'city',
+            name: 'email',
         },
         {
             label:'Contraseña: ',
@@ -429,7 +429,7 @@ module.exports = {
         estadoSolicitud: [
             {
               Header: 'Folio de la solicitud',
-              accessor: '_id', // accessor is the "key" in the data
+              accessor: 'folio', // accessor is the "key" in the data
             },
             {
               Header: 'Tipo de trámite',
@@ -442,6 +442,10 @@ module.exports = {
             {
                 Header: 'Estado de la solicitud',
                 accessor: 'estado',
+            },
+            {
+                Header: 'Ver',
+                accessor: 'ver_user',
             },
           ],
         oficialiaPartes: [

@@ -9,16 +9,20 @@ export default function Home() {
     const history = useHistory();
 
     const login = (inputs) => {
-        console.log('Login', inputs);
-        const inputsAEnviar = {... inputs};
-        /* axios.post('https://podayderribo-cdmx.herokuapp.com/solicitudes/', inputsAEnviar)
-            .then(({data})=>{
-                
+        axios.post('https://poda-api.herokuapp.com/ciudadanos/login', 
+            {...inputs }
+        )
+            .then(({ data , status})=> {
+                if(status === 200) {
+                    window.localStorage.setItem('token', data.key);
+                    history.push('/perfil');
+                }
+                // dependiendo del rol redireccionar
             })
-            .catch(e => {
-
-            }); */
-        history.push('perfil');
+            .catch(error => {
+                console.log('Error', error.message);
+                history.push('/registro/enviado/fallido');
+            });
     };
 
     return(
