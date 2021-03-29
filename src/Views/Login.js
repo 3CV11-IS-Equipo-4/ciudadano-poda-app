@@ -9,19 +9,19 @@ export default function Home() {
     const history = useHistory();
 
     const login = (inputs) => {
-        console.log('Login');
-        axios.post('https://podayderribo-cdmx.herokuapp.com/login/ciudadanos', 
+        axios.post('https://poda-api.herokuapp.com/ciudadanos/login', 
             {...inputs }
         )
             .then(({ data , status})=> {
                 if(status === 200) {
                     window.localStorage.setItem('token', data.key);
-                    history.push('/success');
+                    history.push('/perfil');
                 }
                 // dependiendo del rol redireccionar
             })
             .catch(error => {
                 console.log('Error', error.message);
+                history.push('/registro/enviado/fallido');
             });
     };
 

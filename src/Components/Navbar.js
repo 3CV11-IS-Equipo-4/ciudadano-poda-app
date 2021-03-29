@@ -1,8 +1,10 @@
 import logo from '../img/logocdmx.png'
-import "./Navbar.css"
+import "./Navbar.css";
+import payload from '../utils/payload';
 import { Link } from 'react-router-dom';
 
 export default function Navbar({type}){
+    const p = payload();
     return(
         <nav className="navbar bar">
             <div className="container-fluid conter">
@@ -17,19 +19,17 @@ export default function Navbar({type}){
                     {type === "ciudadano" ? <div className="col-12 title d-flex justify-content-center h-100">
                         <h4>Solicitud de poda o derribo de árbol</h4>
                     </div> :  
-                    <div>
+                    (
+                        <div className="d-flex justify-content-end mr-5">
                         <ul className="nav">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Features</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Pricing</Link>
+                                <Link className="nav-link" to="/logout">
+                                Cerrar Sesión
+                            </Link>
                             </li>
                         </ul>
                     </div>
+                    )
                     }
                 </div>
             </div>
