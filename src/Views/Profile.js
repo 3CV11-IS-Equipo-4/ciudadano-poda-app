@@ -1,12 +1,12 @@
 import Table from '../Components/Table';
 import { tables } from '../utils/const';
-
 import Layout from '../Components/Layout';
 import Card from '../Components/Card-blank';
 import Button from '../Components/Button';
 import { useHistory } from "react-router-dom";
+import protect from '../utils/protect'
 
-export default function Profile() {
+function Profile() {
     const history = useHistory();
     return(
         <Layout type="ciudadano">
@@ -34,6 +34,9 @@ export default function Profile() {
                     <Table cols={tables.estadoSolicitud} datos={tables.mockData}></Table>
                 </div>
             </div>
+            <Button styling="success" type="button" click={() => history.push('/logout')} text="Cerrar Sesión"></Button>
         </Layout>
     );
 }
+
+export default protect(Profile)
