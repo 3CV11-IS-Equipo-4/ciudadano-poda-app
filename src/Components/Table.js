@@ -1,6 +1,8 @@
 import { useTable, useSortBy } from 'react-table';
 import { useMemo } from 'react'; 
-export default function Table({cols, datos}) {
+import { Link } from 'react-router-dom';
+
+export default function Table({cols, datos, aceptar, denegar}) {
   const data = useMemo(
     () => [
         ...datos
@@ -13,6 +15,30 @@ export default function Table({cols, datos}) {
     []
   )
 
+  const getCell = (cell, row) =>{
+    if(cell.column.id === 'edi_sol'){ 
+      return <span className="material-icons" onClick={aceptar} style={{color: "green"}}> task </span>
+    } else if(cell.column.id === 'ver_sol'){
+      return <Link to={`/solicitud/${row.original._id}`}>
+        <span className="material-icons" style={{color: "green"}}> edit </span>
+      </Link>
+    } else if(cell.column.id === 'den_sol'){
+      return <span className="material-icons" onClick={denegar} style={{color: "green"}}> do_not_disturb_alt </span>
+    } if(cell.column.id === 'edi_user'){ 
+      return <span className="material-icons" onClick={aceptar} style={{color: "green"}}> task </span>
+    } else if(cell.column.id === 'ver_user'){
+      return <Link to={`/solicitud/${row.original._id}`}>
+        <span className="material-icons" style={{color: "green"}}> remove_red_eye </span>
+      </Link>
+    } else if(cell.column.id === 'den_user'){
+      return <span className="material-icons" onClick={denegar} style={{color: "green"}}> do_not_disturb_alt </span>
+    } if(cell.column.id === 'permiso_administrador'){
+      return <span className="material-icons" style={{color: cell.value === true ? "green": "gray"}}> check_box </span>
+    } else {
+      return cell.render('Cell')
+    }
+  };
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -22,7 +48,6 @@ export default function Table({cols, datos}) {
   } = useTable({ columns, data }, useSortBy)
 
   return (
-    <div className="table-responsive">
     <table {...getTableProps()} className="table table-bordered mx-3 p-1 shadow bg-white">
       <thead>
         {headerGroups.map(headerGroup => (
@@ -49,20 +74,19 @@ export default function Table({cols, datos}) {
           prepareRow(row)
           return (
             <tr {...row.getRowProps()}>
-              {row.cells.map(cell => {
-                return (
-                  <td
-                    {...cell.getCellProps()}
-                  >
-                    {cell.render('Cell')}
-                  </td>
-                )
+              {row.cells.map(cell => {                
+                  return (
+                    <td
+                      {...cell.getCellProps()}
+                    >{
+                      getCell(cell, row)
+                    }</td>
+                  )
               })}
             </tr>
           )
         })}
       </tbody>
     </table>
-    </div>
   )
 }

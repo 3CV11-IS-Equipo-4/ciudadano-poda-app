@@ -10,6 +10,13 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Profile from './Views/Profile';
 import Success from './Views/Success';
+import SolicitudDetail from './Views/SolicitudDetail';
+import { Redirect } from 'react-router-dom';
+
+const Logout = () => {
+  window.localStorage.removeItem('token');
+  return <Redirect to="/"/>;
+}
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,8 +37,10 @@ ReactDOM.render(
         <Route path="/registro/enviado/fallido">
           <Success exitoso={false}/>
         </Route>
-        <Route exact path="/solicitud/:type" component={Solicitud}/>
-        <Route ath="*">
+        <Route exact path="/registro/solicitud/:type" component={Solicitud}/>
+        <Route exact path="/solicitud/:id" component={SolicitudDetail}/>
+        <Route exact path="/logout" component={Logout}/>
+        <Route path="*">
           <Page404/>
         </Route>
       </Switch>
